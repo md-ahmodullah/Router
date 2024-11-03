@@ -8,7 +8,7 @@ export default function Navbar() {
     </>
   );
   return (
-    <div className="flex justify-between items-center w-11/12 mx-auto py-3">
+    <div className="flex justify-between items-center w-11/12 mx-auto pt-3">
       <div>
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -34,7 +34,7 @@ export default function Navbar() {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl font-bold text-amber-800">
+        <a className="btn btn-ghost text-2xl font-bold text-amber-800">
           Coffee House
         </a>
       </div>
