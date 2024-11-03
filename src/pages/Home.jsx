@@ -1,3 +1,4 @@
+import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import Categories from "../components/Categories";
 import Heading from "../components/Heading";
@@ -13,9 +14,8 @@ export default function Home() {
           "Choose your desired coffee category to browse through specific coffees that fit in your taste."
         }
       />
-      {/* categories tab */}
-      <Categories />
-      {/* nested dynamic component */}
+      <Categories categories={categories} />
+      <Outlet />
     </div>
   );
 }

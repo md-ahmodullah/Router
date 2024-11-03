@@ -1,15 +1,17 @@
-export default function Categories() {
+import { Link } from "react-router-dom";
+export default function Categories({ categories }) {
   return (
     <div role="tablist" className="tabs tabs-lifted py-6">
-      <a role="tab" className="tab">
-        Tab 1
-      </a>
-      <a role="tab" className="tab tab-active">
-        Tab 2
-      </a>
-      <a role="tab" className="tab">
-        Tab 3
-      </a>
+      {categories.map((category) => (
+        <Link
+          to={`/category/${category.category}`}
+          key={category.id}
+          role="tab"
+          className="tab"
+        >
+          {category.category}
+        </Link>
+      ))}
     </div>
   );
 }
